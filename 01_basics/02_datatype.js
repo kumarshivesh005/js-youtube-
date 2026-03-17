@@ -4,7 +4,7 @@
 
 // alert(3+3);//bcz we are using nodejs not console of browser
 
-let name="Shhivesh"//sstring
+let name="Shivesh"//sstring
 let age=18//number
 let bigint=56n;//bigint for bigger number
 let isLoggedin=true //boolean
