@@ -8,3 +8,9 @@ console.log(null>=0)//true
 console.log(undefined>0)
 console.log(undefined==0)
 console.log(undefined>=0)
+
+const id=Symbol('123')
+const newid=Symbol('123');
+console.log(id)
+console.log(newid)
+console.log(id===newid);
