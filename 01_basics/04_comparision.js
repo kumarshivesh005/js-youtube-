@@ -14,3 +14,26 @@ const newid=Symbol('123');
 console.log(id)
 console.log(newid)
 console.log(id===newid);
+
+
+// **** memory *****
+
+// stack(primitive).  call by copy ||Heap(non-premitive):call by reference
+
+let myyoutubename="shiveshkumar";
+let newyoutubename=myyoutubename;
+newyoutubename="lalan";
+console.log(newyoutubename);
+console.log(myyoutubename);
+
+let userOne={
+     email:"shivesh@google.com",
+     mobileNo:9090909090,
+     username:"shivesh"
+};
+let userTwo=userOne;
+console.log(userOne);
+console.log(userTwo);
+
+userOne.email="lalan@gmail.com";
+console.log(userOne);
