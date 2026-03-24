@@ -1,0 +1,10 @@
+const clock=document.getElementById('clock');
+// let date=new Date();
+// clock.innerHTML=date.toLocaleTimeString();
+// console.log(date.toLocaleTimeString())
+
+setInterval(function(){
+    let date=new Date();
+    clock.innerHTML=date.toLocaleTimeString();
+
+},4000)
