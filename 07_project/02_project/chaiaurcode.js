@@ -1,12 +1,15 @@
-// select form first 
-const form=document.querySelector('.form')
+// select form first bcz i have submit buttom on the form.
+const form=document.querySelector('form')
+// this usecase give empty value so 
+// const height=parseInt(document.querySelector("#height").value);//string se parse karne ke liye parseInt ka use karte h
+
 form.addEventListener('submit',function(e){
     // stop default
-    e.defaultPrevented();
-})
+    e.preventDefault();
+
 
 // store height,weight and result in a variable
-const height=parseInt(document.querySelector("#height").value);
+const height=parseInt(document.querySelector("#height").value);//string se parse karne ke liye parseInt ka use karte h
 const weight=parseInt(document.querySelector("#weight").value);
 const result=document.querySelector("#results");
 
@@ -16,6 +19,7 @@ if(height===''||height<0||isNaN(height)){
 }else if(weight ===''|| weight <0|| isNaN(weight )){
     result.innerHTML=`please fill proper weight in place of ${weight}`;
 }else{
-    const BMI=(weight/(height* height))*10000;
+    const BMI=(weight/((height* height)/10000)).toFixed(2);
     result.innerHTML=`<span>${BMI}</span>`
 }
+})
